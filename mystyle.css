@@ -1,0 +1,76 @@
+p {
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+body
+{
+    color: yellow;
+    background-color: black;
+    border-color: yellow;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+a:link {
+    color: yellow;
+    text-decoration-color: yellow;
+
+}
+
+a:visited {
+    color: red;
+}
+a:hover {
+    color: blue;
+}
+
+#pic {
+    width: 400;
+    height: 450;
+    border-color: yellow;
+    border-radius: 2px;
+    border-style:ridge;
+    opacity:initial;
+    border-radius: 5px;
+    align-self: auto;
+    size: 40px;
+}
+
+#Header
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+    text-align: center;
+}
+
+.pBody
+{
+text-align:center;
+float: inline-start;
+}
+
+#bullet
+{
+    text-align:inherit;
+    color: deeppink;
+}
+#bigBody
+{
+    font: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.order
+{
+    font-size: larger;
+}
+#transformer
+{
+    text-align: center;
+    color: green;
+}

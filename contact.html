@@ -1,0 +1,37 @@
+<html>
+    
+    <title>Contact Page</title>
+    <h id="Header">Contact Information:</h>
+        <body id="bigBody">
+            <form id="transformer">
+                <form action="./save_contact.php" method="get" id="transformer">
+                <p class="pBody">Type of Phone:
+                    <input type="radio" name ="Phone"
+                    value="Home" />Home
+                    <input type="radio" name="Phone"
+                    value="Cell"/>Cell
+                    <input type="radio" name="Phone"
+                    value="Fax" />Fax
+                </p>
+
+                <p class="pBody">
+                    Number:
+                    <input type="text" name="number"
+                    size="15" maxlength="10"/>
+                </p>
+                
+                <p class="pBody">
+                    Preferred Communication device:
+                    <select name="devices">
+                        <option value="Cellular Device"
+                        selected="selected">Cellular Device</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Computer">Computer</option>
+                    </select>
+                </p>
+                <input type="submit" id="transformer" value="Send Request"/>
+            </form>
+            </form>
+            <link rel="stylesheet" href="mystyle.css">
+        </body>
+</html>
