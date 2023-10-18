@@ -1,22 +1,9 @@
+<?php
 
-function getDataFromForm() {
-  
-  var firstname=document.getElementById('fname').value;
-  var lastname=document.getElementById('lname').value;
-  runAjax(firstname,lastname);
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-function runAjax(fname ,lname) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    //Edit this
-  const stringResponse=xhttp.responseText;
-  var string = fname+" "+lname;
-   document.getElementById("responseString").innerHTML = stringResponse;
+phpinfo();
 
-    //console.log(this.responseText);
-    }
-    xhttp.open("GET", `./ajax.php?fname=${fname}&lname=${lname}`, true);
-    xhttp.send();
-}
-
+?>
