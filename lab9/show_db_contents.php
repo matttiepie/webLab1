@@ -1,4 +1,5 @@
 <?php
+echo 'hello world'
 $conn = mysqli_connect("127.0.0.2","root","","test");
 if(!$conn)
 {
