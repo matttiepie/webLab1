@@ -17,7 +17,12 @@ if (mysqli_connect_errno())
 }
 
 echo "database connection success<br>";
-echo "<strong>now showing results from a database query...</strong>";
-
+echo "<strong>now showing results from a database query...</strong></br>";
+$query = "SELECT * from LOGIN";
+$stmt=mysqli_query($connection,$query);
+while($row = mysqli_fetch_array($stmt,MYSQLI_ASSOC))
+{
+    echo $row['USERNAME'].' '.$row['PASSWORD'].'</br>';
+}
 ?>
 
