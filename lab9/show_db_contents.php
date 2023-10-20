@@ -1,6 +1,6 @@
 <?php
 echo 'hello world'
-$conn = mysqli_connect("127.0.0.2","root","","test");
+$conn = mysqli_connect("partygoer.mysql.database.azure.com","matthewmartinez","","z_url_set_1");
 if(!$conn)
 {
     die("Error". mysqli_connect_error());
