@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         fclose($file);
 
         echo 'Data saved successfully.';
+        include('show_contents.php');
     } else {
         echo 'Failed to open the file for writing.';
     }
