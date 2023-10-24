@@ -1,6 +1,6 @@
 <?php
 // Specify the path to the data file
-$filePath = 'data/data.txt';
+$filePath = './data/data.txt';
 
 // Read the data from the file into an array
 $dataArray = file($filePath, FILE_IGNORE_NEW_LINES);
