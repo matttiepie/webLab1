@@ -7,7 +7,6 @@ if (isset($_SESSION['user_id'])) {
     // Access and use the session data in session.php
     //echo "User ID from session: " . $user_id;
     if($user_id=='222'){
-        echo 'welcome admin';
         header("Location: admin.html");
     }
     else{
@@ -19,7 +18,6 @@ if (isset($_SESSION['user_id'])) {
     session_write_close();
 } else {
     // Handle the case when the user is not logged in
-    echo 'User is not logged in.';
     header("Location: login.html");
 
 }
