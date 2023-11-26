@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create Account</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="assets/js/accountcreate.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="login.html"> < Go Back to Login</a> </li>
+                    <li><a href="index.html">Home</a> </li>
+                    <li class="title"><a href="index.html"><img class="logo" src="images/plant-icon.svg" alt="logo" height="50px" width="50px">Botanical Buddies</a></li>
+                </ul>
+
+            </nav>
+        </header>
+        
+        <div class="center">
+            <table>
+                <form action = "create.php" method="post">
+                    <tr>
+                        <td><label>Email <br />
+                        <input type="text" name="email" id="email"/></label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password <br />
+                        <input type="password" name="password" id="password"/></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="submit" value="Create"/></td>
+                    </tr>
+                </form>
+                <tr>
+                    <td><a href="newpass.html">Forgot Password</a></td>
+                    <td><a href="createaccount.html">Create New Account</a></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
