@@ -86,8 +86,7 @@ if (isset($_SESSION['user_id'])) {
 
 } else {
     // Handle the case when the user is not logged in
-    echo 'User is not logged in.';
-    header('refresh: 5; url=login.html');
+    header('Location: login.html');
 
 }
     
