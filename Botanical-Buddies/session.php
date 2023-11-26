@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
     // Handle the case when the user is not logged in
     echo 'User is not logged in.';
-    header('refresh: 2; url=login.html');
+    header('refresh: 2; url=/Botanical-Buddies/login.html');
 
 }
 ?>
