@@ -30,8 +30,12 @@ if (isset($_SESSION['user_id'])) {
     $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     echo'
+    <head>
+    <meta charset="utf-8">
+    </head>
     <body>
     <header>
+    
     <nav>
         <ul>
             <li class="title"><a href="admin.html"><img class="logo" src="images/plant-icon.svg" alt="logo" height="50px" width="50px">Botanical Buddies</a></li>
