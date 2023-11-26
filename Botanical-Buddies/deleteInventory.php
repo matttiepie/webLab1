@@ -18,7 +18,7 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
 
     $subtotal = 0.00;
     $totalitems = 0;
-    
+    session_start();
     
 
 if (isset($_SESSION['user_id'])) {
