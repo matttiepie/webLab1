@@ -8,7 +8,7 @@ if (isset($_SESSION['user_id'])) {
     //echo "User ID from session: " . $user_id;
     if($user_id=='222'){
         echo 'welcome admin';
-        header('refresh: 2, url=admin.html');
+        header("Location: admin.html");
     }
     else{
         header('refresh: 2; url=accountinfo.php');
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
     // Handle the case when the user is not logged in
     echo 'User is not logged in.';
-    header('refresh: 2; url=/login.html');
+    header("Location: login.html");
 
 }
 ?>
