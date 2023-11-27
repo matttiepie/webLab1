@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User's Page</title>
+    <link rel="stylesheet" href="styler.css">
+    <script src="cart.js"></script>
+</head>
+
+<header>
+    <h1>User Page</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="icon">
+        <a href="session.php" class="user-icon">
+            <i class="fa fa-user"></i>
+        </a>
+    </div>
+</header>
+
+<nav>
+    <a href="shoppingCart.html">Pet Supplies</a>
+    <a href="login.html">Login</a>
+    <a href="createAccount.html">Create Account</a>
+    <a href="logout.php">Logout</a>
+</nav>
+
+<body>
+    <div class="container">
+        <!-- Input element for uploading images -->
+        <input type="file" id="fileInput" accept="image/*" multiple onchange="showMyImage(this)">
+
+        <!-- Display the selected image(s) as thumbnails -->
+        <div id="thumbnailContainer">
+            <img id="thumbnail" style="display: none; max-width: 300px; max-height: 300px;">
+        </div>
+        <br><br><br>
+
+        <!-- Form for entering sentences -->
+        <form id="sentenceForm">
+            <label for "sentenceInput">Make a Post:</label>
+            <input type="text" id="sentenceInput" required>
+            <button type="button" onclick="postSentence()">Post</button>
+        </form>
+        <br><br>
+
+        <!-- Display area for posted sentences and images -->
+        <div id="postsContainer"></div>
+    </div>
+
+    <script>
+        function showMyImage(fileInput) {
+            const thumbnail = document.getElementById('thumbnail');
+            const thumbnailContainer = document.getElementById('thumbnailContainer');
+            thumbnail.src = URL.createObjectURL(fileInput.files[0]);
+            thumbnail.style.display = 'block';
+        }
+
+        function postSentence() {
+
+            const sentenceInput = document.getElementById('sentenceInput');
+            const sentence = sentenceInput.value;
+
+            // Create a new div for post
+            const postDiv = document.createElement('div');
+
+            // Create a new paragraph
+            const sentenceParagraph = document.createElement('p');
+            sentenceParagraph.textContent = sentence;
+
+            postDiv.appendChild(sentenceParagraph);
+
+            // Check if image 
+            const thumbnail = document.getElementById('thumbnail');
+            if (thumbnail.src) {
+
+                const imageElement = document.createElement('img');
+                imageElement.src = thumbnail.src;
+                imageElement.style.maxWidth = '300px';
+                imageElement.style.maxHeight = '300px';
+
+            
+                postDiv.appendChild(imageElement);
+            }
+
+        
+            const postsContainer = document.getElementById('postsContainer');
+            postsContainer.appendChild(postDiv);
+
+            // Clear the input and reset the image 
+            sentenceInput.value = '';
+            thumbnail.src = '';
+            thumbnail.style.display = 'none';
+        }
+    </script>
+    <link rel="stylesheet" href="styler.css">
+</body>
+
+</html>

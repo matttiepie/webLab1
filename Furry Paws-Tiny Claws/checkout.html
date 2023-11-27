@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="icon">
+            <a href="session.php" class="user-icon">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="checkout.html">Pet Supplies</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <div class="container">
+
+        <div id="items">
+            <div class="item">
+                <h2>Cat Nip (1lb)</h2>
+                <p>Price: $10.00</p>
+                <button class="add-to-cart" onclick="addToCart('Cat Nip', 10.00)">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <h2>Dog Biscuits</h2>
+                <p>Price: $20.00</p>
+                <button class="add-to-cart" onclick="addToCart('Dog Biscuits', 20.00)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h2>Frog flies (1lb)</h2>
+                <p>Price: $5.00</p>
+                <button class="add-to-cart" onclick="addToCart('Frog flies', 5.00)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h2>Cricket Mix(1/2lb)</h2>
+                <p>Price: $.99</p>
+                <button class="add-to-cart" onclick="addToCart('Cricket Mix', 0.99)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h2>Horse Feed</h2>
+                <p>Price: $50.00</p>
+                <button class="add-to-cart" onclick="addToCart('Horse Feed', 50.00)">Add to Cart</button>
+            </div>
+            <div id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+
+                </ul>
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="empty-cart-button" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let cartItems = [];
+
+        function addToCart(itemName, itemPrice) {
+            cartItems.push({ name: itemName, price: itemPrice });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            cartList.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+            });
+
+            const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function checkout() {
+            alert('Purchase successful!');
+           
+        }
+    </script>
+    <link rel="stylesheet" href="styler.css">
+</body>
+
+</html>

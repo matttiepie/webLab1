@@ -1,0 +1,109 @@
+        /* Add CSS styles here to customize your website's appearance */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d58686;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #pup
+        {
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        #catt
+        {
+            width: 300px;
+            height: 400px;
+        }
+        #food, #treats, #accessories
+        {
+            height: 100px;
+            width: 100px;
+            margin-right: 40px;
+            
+            
+        }
+        #cartButton
+        {
+            padding: 20px;
+            margin: 10px auto;
+            right: 10px;
+           
+        }
+
+        #button
+        {
+            right: 10px;
+            margin-right: 55px;
+        }
+        
+        .icon {
+            position: absolute;
+            top: 20px; /* Adjust the top position as needed */
+            right: 20px; /* Adjust the right position as needed */
+            font-size: 24px;
+            color: #3498db; /* Change to your desired icon color */
+            cursor: pointer;
+        }
+        .icon:hover
+        {
+            border-color: tran;
+        }        
+        /* Your existing styles ... */
+
+#shopping-cart {
+    width: 20%;
+    float: right;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+    padding: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+  }
+  
+  #total {
+    font-weight: bold;
+  }
+  

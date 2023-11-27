@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Login</title>
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="icon">
+            <a href="session.php" class="user-icon">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shoppingCart.html">Pet Supplies</a>
+        <a href="login.html">Login</a>
+        <a href="createAccount.html">Create Account</a>
+    </nav>
+    <div class="container">
+        <form action="connect.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+        
+        <section>
+            <br>
+            <a href="passwordRecovery.html">Forgot Password</a>
+            <a href="createAccount.html"> Create Account</a>
+            
+        </section>
+        <p id="responseString"></p>
+    </div>
+</body>
+</html>
