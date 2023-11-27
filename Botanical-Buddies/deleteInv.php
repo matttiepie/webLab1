@@ -20,11 +20,10 @@ if (!$result) {
 if(mysqli_num_rows($result) > 0){
     $delete = "DELETE FROM plant_data WHERE plant_name = '$PLANT'";
     mysqli_query($connection, $delete);
-    echo "Item Deleted";
-    header('refresh: 5, url=deleteInventory.php');
+    header('refresh: 1, url=deleteInventory.php');
 }
 else{
-    echo "Name Does Not Exist";
-    header('refresh: 5; url=deleteInventory.php');
+
+    header('refresh: 1; url=deleteInventory.php');
 }
 ?>
