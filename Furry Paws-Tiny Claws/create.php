@@ -1,7 +1,10 @@
 <?php
-$USERNAME=$_POST['username'];
-$PASSWORD=$_POST['password'];
-$connection = mysqli_connect("localhost:3307", "root", "", "test");
+$db_host = "partygoer.mysql.database.azure.com"; // Change this
+$db_user = "matthewmartinez"; // Change this
+$db_pass = "1qaz2wsx!QAZ@WSX"; // Change this
+$db_name = "herewego"; // Do not change
+
+$connection = mysqli_connect("$db_host", "$db_user", "$db_pass", "$db_name");
 
 if (!$connection) {
     die("Error: " . mysqli_connect_error());
