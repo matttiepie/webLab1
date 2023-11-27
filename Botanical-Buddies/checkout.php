@@ -33,6 +33,8 @@
 </html>
 <?php
 session_start();
+echo $_COOKIE["items"];
+    echo $_COOKIE["price"];
 
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
