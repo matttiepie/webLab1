@@ -36,6 +36,7 @@ session_start();
 
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
+    echo $user_id;
 
     echo '<script type="text/javascript" src="cartScript.js"></script>';
     $db_host="partygoer.mysql.database.azure.com";        
