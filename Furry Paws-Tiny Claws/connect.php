@@ -34,8 +34,7 @@ if (mysqli_num_rows($result) > 0) {
     // Redirect to session.php
     header("Location: session.php");
 } else {
-    echo 'Login unsuccessful';
-    header('refresh: 5; url=login.html');
+    header('Location: login.html');
 }
 
 mysqli_stmt_close($stmt);
