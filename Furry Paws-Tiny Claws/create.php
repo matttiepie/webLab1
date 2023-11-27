@@ -1,6 +1,6 @@
 <?php
 session_start();
-$USERNAME = $_POST['email'];
+$USERNAME = $_POST['username'];
 $PASSWORD = $_POST['password'];
 $db_host = "partygoer.mysql.database.azure.com"; // Change this
 $db_user = "matthewmartinez"; // Change this
