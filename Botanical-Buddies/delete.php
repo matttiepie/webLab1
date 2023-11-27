@@ -14,11 +14,9 @@ $result = mysqli_query($connection, $query);
 if(mysqli_num_rows($result) > 0){
     $delete = "DELETE FROM LOGIN WHERE username = '$USERNAME'";
     mysqli_query($connection, $delete);
-    echo "Account Deleted";
     header('refresh: 5, url=deleteAccount.php');
 }
 else{
-    echo "Account does not exist";
     header('refresh: 5; url=deleteAccount.php');
 }
 ?>
