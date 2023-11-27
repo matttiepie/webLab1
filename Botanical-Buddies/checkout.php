@@ -3,8 +3,7 @@ session_start();
 
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
-    echo $user_id;
-
+   
     $db_host="partygoer.mysql.database.azure.com";        
     $db_user="matthewmartinez";        
     $db_pass="1qaz2wsx!QAZ@WSX";        
@@ -15,9 +14,6 @@ if (isset($_SESSION['user_id'])) {
     $password = "";
     $db = "plants";
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-    echo $_COOKIE["price"]; 
-    echo "   ";
-    echo $_COOKIE["items"]; 
     echo'<html>
     <head>
         <meta charset="utf-8">
