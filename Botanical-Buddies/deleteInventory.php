@@ -1,4 +1,7 @@
 <?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
 echo '<script type="text/javascript" src="cartScript.js"></script>';
 
 
@@ -18,11 +21,10 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
 
     $subtotal = 0.00;
     $totalitems = 0;
-    session_start();
+    
     
 
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+
 
     $sql = 'SELECT plant_name, plant_type, plant_description, plant_price, plant_quantity_available FROM plant_data';
     
