@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styler.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Delete Account</h1>
+        </header>
+        <nav>
+            <a href="homepage.html">Admin Home Page</a>
+            <a href="create.html">Create An Account</a>
+        </nav>
+        <div class="container">
+            <form id="login-form">
+                Username: <input type="text" name="user" id="user"><br><br>
+               
+                <input type="button" id="ajaxCall" value="Login" onclick="getDataFromForm()">
+                
+            </form>
+            <p id="responseString"></p>
+        </div>
+        <script src="delete.js"></script>
+    </body>
+</html>

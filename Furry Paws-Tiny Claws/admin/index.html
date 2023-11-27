@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styler.css">
+    </head>
+ 
+<body>
+    <header>
+        <h1>Administrator Login</h1>
+    </header>
+ 
+<div class="container">
+    <section id="Admin">
+        <form id="login-form">
+            Username: <input type="text" name="user" id="user"><br><br>
+            Password: <input type="password" name="pass" id="pass"><br><br>
+            <input type="button" id="ajaxCall" value="Login" onclick="getDataFromForm()">
+            
+        </form>
+        <p id="responseString"></p>
+    </section>
+
+</div>
+<script src="adminData.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styler.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Create An Account</h1>
+        </header>
+        <nav>
+            <a href="homepage.html">Admin Home Page</a>
+            <a href="create.html">Create An Account</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+        <div class="container">
+            <form action="create.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <input type="submit" value="Create">
+            </form>
+            
+        </div>
+    </body>
+</html>
