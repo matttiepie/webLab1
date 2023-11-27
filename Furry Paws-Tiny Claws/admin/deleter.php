@@ -25,10 +25,8 @@ $delete="DELETE FROM LOGIN WHERE username = '$USERNAME'";
 
 $stmt1 = mysqli_query($connection, $delete);
     // Redirect to session.php
-    echo 'Account Deleted';
     header('refresh: 2; url=delete.php');
 } else {
-    echo 'unsuccessful';
     header('refresh: 2; url=delete.php');
 }
 
