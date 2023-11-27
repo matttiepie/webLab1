@@ -18,7 +18,7 @@ if (isset($_SESSION['user_id'])) {
     <head>
         <meta charset="utf-8">
         <title>Botanical Buddies</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        
     </head>
             <div>
             <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700" rel="stylesheet" type="text/css">
