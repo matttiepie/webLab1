@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 echo '<script type="text/javascript" src="cartScript.js"></script>';
@@ -84,7 +85,7 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
 
 } else {
     // Handle the case when the user is not logged in
-    echo 'User is not logged in.';
+   
     header('refresh: 5; url=login.html');
 
 }
