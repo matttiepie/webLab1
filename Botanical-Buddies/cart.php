@@ -149,6 +149,9 @@ $checkout = "'checkout.php'";
     echo '<script type="text/javascript">jsFunction("items", '. $totalitems .');</script>';
     echo $_COOKIE["items"];
     echo $_COOKIE["price"];
+    $user_id = $_SESSION['user_id'];
+    echo $user_id;
+
     
 
 ?>
