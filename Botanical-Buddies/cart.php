@@ -1,6 +1,8 @@
 <?php
 // Start the session
-session_start();
+  session_start();
+if (isset($_SESSION['user_id'])) 
+    $user_id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,7 +149,7 @@ $checkout = "'checkout.php'";
     </main>';
     echo '<script type="text/javascript">jsFunction("price", '. $cartTotal .');</script>';
     echo '<script type="text/javascript">jsFunction("items", '. $totalitems .');</script>';
-    
+
 
 ?>
 
