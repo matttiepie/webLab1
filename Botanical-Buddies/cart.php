@@ -1,11 +1,6 @@
 <?php
+// Start the session
 session_start();
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];}
-else{
-    header('Location: login.html');
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +25,7 @@ else{
 <body>
       
 <?php
+
 echo '<script type="text/javascript" src="cartScript.js"></script>';
 
 
@@ -151,7 +147,7 @@ $checkout = "'checkout.php'";
     </main>';
     echo '<script type="text/javascript">jsFunction("price", '. $cartTotal .');</script>';
     echo '<script type="text/javascript">jsFunction("items", '. $totalitems .');</script>';
-}
+    
 
 ?>
 
