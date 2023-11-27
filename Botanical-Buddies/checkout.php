@@ -16,6 +16,7 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
     $sql = "UPDATE `plant_data` SET plant_quantity_available = (plant_quantity_available - plant_quantity)";
     $statement = $pdo->prepare($sql);
     $statement->execute();  
+    $user_id = $_SESSION['user_id'];
     echo $user_id;
     $sql = "INSERT INTO orderhistory (order_username, num_items, order_price, order_date)
     VALUES  (?,?,?,?)";
