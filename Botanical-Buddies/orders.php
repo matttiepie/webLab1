@@ -1,4 +1,6 @@
 <?php
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
 echo '<script type="text/javascript" src="cartScript.js"></script>';
 
 
@@ -21,8 +23,7 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
     session_start();
     
 
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+
 
     $sql = 'SELECT order_id, order_date, order_price, num_items FROM orderhistory WHERE 
     order_username = "' . $user_id . '"';
