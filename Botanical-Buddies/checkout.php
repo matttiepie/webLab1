@@ -1,12 +1,31 @@
-<!DOCTYPE html>
-<html>
+
+<?php
+
+session_start();
+if (isset($_SESSION['user_id'])) {
+    
+    $user_id = $_SESSION['user_id'];
+
+    echo '<script type="text/javascript" src="cartScript.js"></script>';
+    $db_host="partygoer.mysql.database.azure.com";        
+    $db_user="matthewmartinez";        
+    $db_pass="1qaz2wsx!QAZ@WSX";        
+    $db_name="herewego";  
+    $server = "localhost";
+    $user = "root";
+    $port = 3307;
+    $password = "";
+    $db = "plants";
+    $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+    echo'
+    <html>
     <head>
         <meta charset="utf-8">
         <title>Botanical Buddies</title>
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
             <div>
-            <link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700" rel="stylesheet" type="text/css">
 	<style>
 		@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
 		@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
@@ -23,34 +42,14 @@
 	<div class="main-content">
 		<i class="fa fa-check main-content__checkmark" id="checkmark"></i>
 		<p class="main-content__body" data-lead-id="main-content-body">
-            Thank you for your order! We'll get everything packaged and sent to you in no time!</p>
+            Thank you for your order! We will get everything packaged and sent to you in no time!</p>
             <a href="index.html">Click here to continue Shopping</a>
 	</div>
             </div>
             <div id="container" class="carousel"></div>
         </main>
     </body>
-</html>
-<?php
-session_start();
-
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
-
-    echo '<script type="text/javascript" src="cartScript.js"></script>';
-    $db_host="partygoer.mysql.database.azure.com";        
-    $db_user="matthewmartinez";        
-    $db_pass="1qaz2wsx!QAZ@WSX";        
-    $db_name="herewego";  
-    $server = "localhost";
-    $user = "root";
-    $port = 3307;
-    $password = "";
-    $db = "plants";
-    $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-    echo $_COOKIE["price"]; 
-    echo "   ";
-    echo $_COOKIE["items"]; 
+</html>';
 
     $sql = "UPDATE `plant_data` SET plant_quantity_available = (plant_quantity_available - plant_quantity)";
     $statement = $pdo->prepare($sql);
