@@ -1,4 +1,9 @@
 <?php
+  session_start();
+    
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
 echo '<script type="text/javascript" src="cartScript.js"></script>';
 
 
@@ -18,11 +23,7 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
 
     $subtotal = 0.00;
     $totalitems = 0;
-    session_start();
-    
-
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+  
 
     $sql = 'SELECT USERNAME FROM LOGIN';
     
@@ -79,7 +80,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
     // Handle the case when the user is not logged in
     echo 'User is not logged in.';
-    header('refresh: 5; url=login.html');
+    header('Location: login.html');
 
 }
     
