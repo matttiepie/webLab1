@@ -63,7 +63,7 @@ if (isset($_SESSION['user_id'])) {
     $statement->execute([$user_id, $_COOKIE["items"], $_COOKIE["price"], $date]);
      
 
-     $sql = "UPDATE `plant_data` SET plant_quantity = 0";
+    $sql = "UPDATE plant_data SET plant_quantity = 0 WHERE plant_quantity > 0";
      $statement = $pdo->prepare($sql);
      $statement->execute();
 
