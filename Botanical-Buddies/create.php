@@ -26,6 +26,6 @@ else{
     $insert = "INSERT INTO login values('$USERNAME',$PASSWORD)";
     mysqli_query($connection, $insert);
     echo "Account Created";
-    header('refresh: 5; url=login.html');
+    header('Location: login.html');
 }
 ?>
