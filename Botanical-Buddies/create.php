@@ -19,13 +19,11 @@ if (!$result) {
     die("Error in query: " . mysqli_error($connection));
 }
 if(mysqli_num_rows($result) > 0){
-    echo "Account Exists";
     header('refresh: 5, url=createAccount.html');
 }
 else{
     $insert = "INSERT INTO login values('$USERNAME',$PASSWORD)";
     mysqli_query($connection, $insert);
-    echo "Account Created";
-    header('refresh: 5; url=login.html');
+    header('Location: login.html');
 }
 ?>
