@@ -70,7 +70,8 @@ echo '<script type="text/javascript" src="cartScript.js"></script>';
 </header>
 <div>
 <marquee class="announcement" behavior="scroll" direction="right" scrollamount="4">🌿coupon codes🌿</marquee>
-</div>';
+</div>
+<h2>Order Cart For User: ' . $user_id . '</h2>';
     echo'<main>
     <div class="basket">
 
@@ -147,11 +148,6 @@ $checkout = "'checkout.php'";
     </main>';
     echo '<script type="text/javascript">jsFunction("price", '. $cartTotal .');</script>';
     echo '<script type="text/javascript">jsFunction("items", '. $totalitems .');</script>';
-    echo $_COOKIE["items"];
-    echo $_COOKIE["price"];
-    $user_id = $_SESSION['user_id'];
-    echo $user_id;
-
     
 
 ?>
